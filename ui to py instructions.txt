@@ -1,0 +1,3 @@
+In command prompt:
+
+pyuic5 SW_GUI_prototype_PM1000.ui -o SW_GUI_prototype_PM1000.py

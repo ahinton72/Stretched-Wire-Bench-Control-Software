@@ -1,0 +1,1817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1111</width>
+    <height>946</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Magnet Lab Controls - Stretched Wire</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Senis 3MH6 Teslameter/magnet_lab_GUI_images.qrc">
+    <normaloff>:/newPrefix/magnet_icon.jpg</normaloff>:/newPrefix/magnet_icon.jpg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>591</width>
+      <height>831</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string/>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="move_tab">
+     <attribute name="title">
+      <string>Movement</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>Move stages</string>
+     </attribute>
+     <widget class="QGroupBox" name="move_typeBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>181</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Select Movement Type</string>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="title">
+       <string>Movement Type</string>
+      </property>
+      <widget class="QRadioButton" name="relativeRadio">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>95</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Move Relative Distance</string>
+       </property>
+       <property name="text">
+        <string>Relative</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="globalRadio">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>95</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Move to Global Position</string>
+       </property>
+       <property name="text">
+        <string>Global</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QStackedWidget" name="movementStack">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>20</y>
+        <width>321</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Panel</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="RelativeMove">
+       <widget class="QPushButton" name="stage1_relativemoveButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>210</y>
+          <width>201</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Move Stage Relative Distance</string>
+        </property>
+        <property name="text">
+         <string>MOVE STAGE 1</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_8">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>301</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Move Relative Distance:</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="gridLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>201</width>
+          <height>127</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Stage 1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>x</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="stage1_x_rel_edit">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="stage1_theta_rel_edit">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="stage1_y_rel_edit">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>y</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>Theta</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLabel" name="label_25">
+           <property name="text">
+            <string>deg</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="gridLayoutWidget_6">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>300</y>
+          <width>201</width>
+          <height>145</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="stage2_x_rel_edit">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_27">
+           <property name="text">
+            <string>x</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="stage2_theta_rel_edit">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_28">
+           <property name="text">
+            <string>y</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_29">
+           <property name="text">
+            <string>Theta</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="stage2_y_rel_edit">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_30">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLabel" name="label_32">
+           <property name="text">
+            <string>deg</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="label_31">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_26">
+           <property name="text">
+            <string>Stage 2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_33">
+           <property name="text">
+            <string>z</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="stage2_z_rel_edit">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLabel" name="label_34">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="stage2_relativemoveButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>460</y>
+          <width>201</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Move Stage Relative Distance</string>
+        </property>
+        <property name="text">
+         <string>MOVE STAGE 2</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="GlobalMove">
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>231</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Move to Position:</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="gridLayoutWidget_7">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>201</width>
+          <height>127</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>Stage 1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_13">
+           <property name="text">
+            <string>x</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="stage1_x_abs_edit">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="stage1_theta_abs_edit">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="stage1_y_abs_edit">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>y</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_35">
+           <property name="text">
+            <string>Theta</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_36">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="label_37">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLabel" name="label_38">
+           <property name="text">
+            <string>deg</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="stage1_globalmoveButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>210</y>
+          <width>201</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Move Stage Relative Distance</string>
+        </property>
+        <property name="text">
+         <string>MOVE STAGE 1</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="gridLayoutWidget_8">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>300</y>
+          <width>201</width>
+          <height>145</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="stage2_x_abs_edit">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_39">
+           <property name="text">
+            <string>x</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="stage2_theta_abs_edit">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="label_40">
+           <property name="text">
+            <string>y</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="label_41">
+           <property name="text">
+            <string>Theta</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="stage2_y_abs_edit">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QLabel" name="label_42">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
+          <widget class="QLabel" name="label_46">
+           <property name="text">
+            <string>deg</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QLabel" name="label_47">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_48">
+           <property name="text">
+            <string>Stage 2</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="label_67">
+           <property name="text">
+            <string>z</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="stage2_z_abs_edit">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QLabel" name="label_68">
+           <property name="text">
+            <string>mm</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="stage2_globalmoveButton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>460</y>
+          <width>201</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>18</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Move Stage Relative Distance</string>
+        </property>
+        <property name="text">
+         <string>MOVE STAGE 2</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Synced Move</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>Move both stages synchronously</string>
+     </attribute>
+     <widget class="QWidget" name="gridLayoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>551</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>Horizontal (x) distance / mm</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_44">
+         <property name="text">
+          <string>Rotation angle / deg</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_43">
+         <property name="text">
+          <string>Vertical (y) distance / mm</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_50">
+         <property name="text">
+          <string>Stage 2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_49">
+         <property name="text">
+          <string>Stage 1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="x_sync_pushButton">
+         <property name="toolTip">
+          <string>Move stages horizontally</string>
+         </property>
+         <property name="text">
+          <string>Move x</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QPushButton" name="y_sync_pushButton">
+         <property name="toolTip">
+          <string>Move stages vertically</string>
+         </property>
+         <property name="text">
+          <string>Move y</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QPushButton" name="theta_sync_pushButton">
+         <property name="toolTip">
+          <string>Move rotation stages</string>
+         </property>
+         <property name="text">
+          <string>Move theta</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="x1_sync_lineEdit">
+         <property name="toolTip">
+          <string>Enter distance to move Stage 1 x</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLineEdit" name="x2_sync_lineEdit">
+         <property name="toolTip">
+          <string>Enter distance to move stage 2 x</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="y1_sync_lineEdit">
+         <property name="toolTip">
+          <string>Enter distance to move stage 1 y</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLineEdit" name="y2_sync_lineEdit">
+         <property name="toolTip">
+          <string>Enter distance to move stage 2 y</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="theta1_sync_lineEdit">
+         <property name="toolTip">
+          <string>Enter rotation angle for stage 1</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLineEdit" name="theta2_sync_lineEdit">
+         <property name="toolTip">
+          <string>Enter rotation angle for stage 2</string>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Motor Settings</string>
+     </attribute>
+     <attribute name="toolTip">
+      <string>Set motor controller settings</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBox_20">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>741</width>
+        <height>701</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="title">
+       <string>Set Motor Controller Settings</string>
+      </property>
+      <widget class="QPushButton" name="motorsettingsButton">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>320</y>
+         <width>431</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="toolTip">
+        <string>Apply changes to motor settings</string>
+       </property>
+       <property name="text">
+        <string>Apply Changes</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="gridLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>30</y>
+         <width>551</width>
+         <height>271</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="2">
+         <widget class="QLabel" name="label_57">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Lower Soft 
+Limit (mm)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_59">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>y1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_60">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>x1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="label_61">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Slew speed (mm/s)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_62">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Upper Soft 
+Limit (mm)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_63">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Axis</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_64">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>x2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_80">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>y2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_81">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>z2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="label_82">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Theta1 (deg)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_83">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="text">
+           <string>Theta2 (deg)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="x1speedEdit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLineEdit" name="x1lowerEdit"/>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="x1upperEdit"/>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="y1speedEdit"/>
+        </item>
+        <item row="2" column="2">
+         <widget class="QLineEdit" name="y1lowerEdit"/>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLineEdit" name="y1upperEdit"/>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="x2speedEdit"/>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLineEdit" name="x2lowerEdit"/>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLineEdit" name="x2upperEdit"/>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="y2speedEdit"/>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLineEdit" name="y2lowerEdit"/>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLineEdit" name="y2upperEdit"/>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLineEdit" name="z2speedEdit"/>
+        </item>
+        <item row="5" column="2">
+         <widget class="QLineEdit" name="z2lowerEdit"/>
+        </item>
+        <item row="5" column="3">
+         <widget class="QLineEdit" name="z2upperEdit"/>
+        </item>
+        <item row="6" column="1">
+         <widget class="QLineEdit" name="theta1speedEdit"/>
+        </item>
+        <item row="6" column="2">
+         <widget class="QLineEdit" name="theta1lowerEdit"/>
+        </item>
+        <item row="6" column="3">
+         <widget class="QLineEdit" name="theta1upperEdit"/>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLineEdit" name="theta2speedEdit"/>
+        </item>
+        <item row="7" column="2">
+         <widget class="QLineEdit" name="theta2lowerEdit"/>
+        </item>
+        <item row="7" column="3">
+         <widget class="QLineEdit" name="theta2upperEdit"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="positionBox">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>40</y>
+      <width>391</width>
+      <height>221</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="title">
+     <string>Current Motor Positions</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>15</x>
+       <y>30</y>
+       <width>361</width>
+       <height>181</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_70">
+        <property name="text">
+         <string>Stage 2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_71">
+        <property name="text">
+         <string>mm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="stage2_x_label">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_69">
+        <property name="text">
+         <string>Stage 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="stage1_x_label">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>z</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>y</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLabel" name="label_73">
+        <property name="text">
+         <string>mm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>x</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="label_72">
+        <property name="text">
+         <string>mm</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLabel" name="label_74">
+        <property name="text">
+         <string>deg</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_75">
+        <property name="text">
+         <string>Theta</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="stage1_y_label">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="stage2_y_label">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="stage2_z_label">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="stage1_theta_label">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="stage2_theta_label">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="motorsettingsGroupBox">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>260</y>
+      <width>481</width>
+      <height>321</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="title">
+     <string>Current Motor Controller Settings</string>
+    </property>
+    <widget class="QWidget" name="gridLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>461</width>
+       <height>281</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <item row="0" column="2">
+       <widget class="QLabel" name="label_17">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Lower Soft 
+Limit</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_20">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>y1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_19">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>x1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="label_16">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Slew speed 
+(mm/s)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="label_18">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Upper Soft 
+Limit</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_15">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Axis</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="x1speedLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_21">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>x2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QLabel" name="x1lowerLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="x1upperLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <widget class="QLabel" name="y1lowerLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="y1speedLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="y1upperLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3">
+       <widget class="QLabel" name="x2upperLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLabel" name="x2lowerLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="x2speedLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_76">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>y2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_77">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>z2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="label_78">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Theta1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="label_79">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>Theta2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="y2speedLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="2">
+       <widget class="QLabel" name="y2lowerLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="3">
+       <widget class="QLabel" name="y2upperLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLabel" name="z2speedLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLabel" name="z2lowerLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="3">
+       <widget class="QLabel" name="z2upperLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLabel" name="theta1speedLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2">
+       <widget class="QLabel" name="theta1lowerLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3">
+       <widget class="QLabel" name="theta1upperLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLabel" name="theta2speedLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="2">
+       <widget class="QLabel" name="theta2lowerLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="3">
+       <widget class="QLabel" name="theta2upperLabel">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+          <underline>false</underline>
+         </font>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>790</y>
+      <width>251</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_22">
+       <property name="text">
+        <string>alex.hinton@stfc.ac.uk</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="version_label">
+       <property name="text">
+        <string>Magnet Lab Controls - Stretched Wire v1.0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="ContactLabel">
+       <property name="text">
+        <string>Contact: Alex Hinton</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label_24">
+    <property name="geometry">
+     <rect>
+      <x>960</x>
+      <y>820</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="../Senis 3MH6 Teslameter/magnet_lab_GUI_images.qrc">:/newPrefix/UKRI_STFC_ASTEC_RGB.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1111</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>stage1_x_rel_edit</tabstop>
+  <tabstop>stage1_y_rel_edit</tabstop>
+  <tabstop>stage1_theta_rel_edit</tabstop>
+  <tabstop>stage1_relativemoveButton</tabstop>
+  <tabstop>stage2_x_rel_edit</tabstop>
+  <tabstop>stage2_y_rel_edit</tabstop>
+  <tabstop>stage2_z_rel_edit</tabstop>
+  <tabstop>stage2_theta_rel_edit</tabstop>
+  <tabstop>stage2_relativemoveButton</tabstop>
+  <tabstop>stage1_x_abs_edit</tabstop>
+  <tabstop>stage1_y_abs_edit</tabstop>
+  <tabstop>stage1_theta_abs_edit</tabstop>
+  <tabstop>stage1_globalmoveButton</tabstop>
+  <tabstop>stage2_x_abs_edit</tabstop>
+  <tabstop>stage2_y_abs_edit</tabstop>
+  <tabstop>stage2_z_abs_edit</tabstop>
+  <tabstop>stage2_theta_abs_edit</tabstop>
+  <tabstop>stage2_globalmoveButton</tabstop>
+  <tabstop>globalRadio</tabstop>
+  <tabstop>motorsettingsButton</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>relativeRadio</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../Senis 3MH6 Teslameter/magnet_lab_GUI_images.qrc"/>
+  <include location="magnet_lab_GUI_images.qrc"/>
+  <include location="magnet_lab_GUI_images.qrc"/>
+ </resources>
+ <connections/>
+</ui>

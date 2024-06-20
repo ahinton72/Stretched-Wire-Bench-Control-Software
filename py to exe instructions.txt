@@ -1,0 +1,7 @@
+In command prompt:
+
+1. Set directory path: cd C:\Users\itx75623\OneDrive - Science and Technology Facilities Council\Documents\magnet lab control\Senis 3MH6 Teslameter
+
+2. Create .exe file (need to include additional files as additional hooks:
+
+python -m PyInstaller --noconsole --onefile SW_mainGUI_v1.py --additional-hooks-dir motor_controller_PM1000.py --additional-hooks-dir SW_GUI_prototype_PM1000.py --additional-hooks-dir magnet_lab_GUI_images_rc.py
